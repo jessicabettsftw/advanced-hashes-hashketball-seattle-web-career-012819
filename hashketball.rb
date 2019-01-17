@@ -203,8 +203,7 @@ def player_stats(name)
       if info == :players
         players.each do |player, player_info|
           if player == name
-            #puts "its equal"
-            return hash_info[team][info][player][:shoe]
+            return player_info
           end
         end
       end
