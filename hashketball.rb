@@ -212,7 +212,23 @@ def player_stats(name)
 end
 
 def big_shoe_rebounds
+   hash_info = game_hash()
+   min = 100
+   rebounds = -1
   
+  hash_info.each do |team, team_info|
+    team_info.each do |info, players|
+      if info == :players
+        players.each do |player, player_info|
+          shoe_size = hash_info[team][info][player][:shoe]
+          if shoe_size < min
+            min = shoe_size
+            rebounds = hash_info[team][info][player][:rebounds]
+          end
+        end
+      end
+    end
+  end
 end
 
 
