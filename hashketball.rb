@@ -196,36 +196,7 @@ def player_numbers(team_name)
 end
 
 def player_stats()
-    hash_info = game_hash()
-  
-  teams = hash_info.keys()
-  teams.collect do |team|
-    hash_info[team][:team_name]
-  end
-end
-
-def player_numbers(team_name)
-  hash_info = game_hash()
-  player_numbers = []
-  
-  hash_info.each do |team, team_info|
-    bool = false
-    team_info.each do |team_key, team_value|
-      if team_value == team_name
-        bool = true
-      end
-      if team_key == :players
-        team_value.each do |player, player_info|
-          if bool == true
-            player_numbers.push(player_info[:number])
-          end
-        end
-      end
-    end
-  end
-  
-  player_numbers
-  
+    
 end
 
 def big_shoe_rebounds
