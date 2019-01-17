@@ -213,7 +213,7 @@ end
 
 def big_shoe_rebounds
    hash_info = game_hash()
-   min = 100
+   max = 0
    rebounds = -1
   
   hash_info.each do |team, team_info|
@@ -221,8 +221,8 @@ def big_shoe_rebounds
       if info == :players
         players.each do |player, player_info|
           shoe_size = hash_info[team][info][player][:shoe]
-          if shoe_size < min
-            min = shoe_size
+          if shoe_size < max
+            max = shoe_size
             rebounds = hash_info[team][info][player][:rebounds]
           end
         end
