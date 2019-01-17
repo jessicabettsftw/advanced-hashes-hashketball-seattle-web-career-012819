@@ -180,7 +180,6 @@ def player_numbers(team_name)
     bool = false
     team_info.each do |team_key, team_value|
       if team_value == team_name
-        puts "we found #{team_name}"
         bool = true
       end
       if team_key == :players
