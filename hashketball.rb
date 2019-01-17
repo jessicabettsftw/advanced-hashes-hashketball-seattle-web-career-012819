@@ -184,8 +184,7 @@ def player_numbers(team_name)
       end
       if team_key == :players
         team_key.each do |player, player_info|
-          #for each player get number
-          puts player[:number]
+          puts player
         end
       end
     end
