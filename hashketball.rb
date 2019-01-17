@@ -174,6 +174,7 @@ end
 
 def player_numbers(team_name)
   hash_info = game_hash()
+  player_numbers = []
   
   hash_info.each do |team, team_info|
     bool = false
