@@ -183,7 +183,7 @@ def player_numbers(team_name)
         bool = true
       end
       if team_key == :players
-        team_key.each do |player, player_info|
+        team_value.each do |player, player_info|
           puts player
         end
       end
